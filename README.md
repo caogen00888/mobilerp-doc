@@ -22,10 +22,10 @@ It currently fetch some reports (See [MobilERP-server Roadmap][6]). It also scan
 
 - [ ] Code refactoring
 - [ ] Better UI
-	- [ ] Implement navbar
+	- [X] Implement navbar
 	- [ ] Split daily activities from management activities
 	- [ ] Revise font text and position
-- [ ] Implement service discovery
+- [X] Implement service discovery
 
 [1]: https://travis-ci.org/eligiobz/mobilerp-android
 [2]: https://github.com/eligiobz/mobilerp-server

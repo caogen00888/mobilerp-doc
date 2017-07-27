@@ -37,6 +37,23 @@
 	```
 1. Launch mobilerp server with ```python app.py```
 
+### Lauching net-mon & mobilerp on boot
+
+1. Login into your rpi and navigate to the admin folder in your repo clon
+	```bash
+	cd <your-clone-of-mobilerp>/admin
+	```
+1. Copy (as root) the ```mobilerp-daemon.sh``` and ```net-mon-daemon.sh``` to the folder ```/etc/init.d/```. Please note that the daemon scripts point to the scripts in ```/home/mobilerp/admin/<script-name>.sh```. If your path is different from this, please edit the daemon files to match your path. Finally, check the scripts have running privileges. 
+	```bash
+	sudo cp  *-daemon.sh /etc/init.d/
+	```
+1. Add them to the init level
+	```bash
+	cd /etc/init.d/
+	sudo update-rc.d mobilerp-daemon.sh defaults 
+	sudo update-rc.d net-mon-daemon.sh defaults 
+	```
+
 [1]: https://www.raspberrypi.org/downloads/raspbian/
 [2]: https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 [3]: https://www.raspberrypi.org
